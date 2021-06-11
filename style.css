@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+html, body{
+    display:grid;
+    background-image: url("wallpapers/wpGrayishBlurred.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+
+.container{
+    color: rgba(78, 75, 75, 0.753);
+    position: relative;
+    text-align: center;
+    display: flex;
+    width: 600px;
+    background: rgba(175, 175, 175, 0.925);
+    padding: 20px 30px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 2px 37px 6px rgba(64,64,64,0.81);
+    -moz-box-shadow: 0px 2px 37px 6px rgba(64,64,64,0.81);
+    box-shadow: 0px 2px 37px 6px rgba(64,64,64,0.81);
+    
+    justify-content: center;
+}
+
+.container .widget input{
+    display: none;
+}
+
+.widget label{
+    font-size: 60px;
+    padding: 20px;
+    float: right;
+    color:rgba(87, 85, 85, 0.767); 
+    transition: all 0.4s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: rgb(230, 230, 1);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+input:checked ~ label{
+    color: rgb(230, 230, 1);
+  }
+
+input#rate-5:checked ~ label{
+    color: rgb(255, 255, 5);
+    text-shadow: 0 0 20px rgba(156, 119, 15, 0.781);
+}
+
+#rate-1:checked ~ form header:before{
+    content: "I just hate it";
+}
+
+#rate-2:checked ~ form header:before{
+    content: "I don't like it";
+}
+
+#rate-3:checked ~ form header:before{
+    content: "It is OK";
+}
+
+#rate-4:checked ~ form header:before{
+    content: "I like it";
+}
+
+#rate-5:checked ~ form header:before{
+    content: "I love it!";
+}
+
+.container .post{
+    display: none;
+}
+
+.container form{
+    display: none;
+  }
+
+input:checked ~ form{
+    display: block;
+}
+
+.container .text{
+    font-size: 30px;
+    color: rgba(78, 75, 75, 0.87);
+    font-weight: 500;
+}
+
+.container .othersRatings{
+    font-size: 16px;
+    color: rgba(78, 75, 75, 0.87);
+    margin-left: 300px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container .othersRatings:hover{
+    text-decoration: underline;
+  }
+
+form header{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background: rgb(202, 202, 202);
+    padding: 10px;
+    font-size: 19px;
+    resize: none;
+    border: 0.1px solid rgba(87, 85, 85, 0.274);
+    border-radius: 4px;
+    color: rgba(78, 75, 75, 0.788);
+}
+
+
+form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .btn button{
+    height: 100%;
+    width: 50%;
+    border: 1px solid rgb(148, 148, 148);
+    outline: none;
+    background: rgba(87, 85, 85, 0.767);
+    color: rgb(202, 202, 202);
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ratingsAndComments{
+      display:none;
+      font-size: 18px;
+      place-items: center;
+      text-align: center;
+
+}
+
+.commentClass{
+    word-wrap: break-word;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0.5px solid rgba(87, 85, 85, 0.274);
+    border-radius: 5px;
+    padding: 5px;
+    background: rgb(202, 202, 202);
+    font-size: 18px;
+    width: 50%;
+}
+
+#home{
+    width: 100px;
+    margin-right: 450px;
+    margin-top: -150px;
+    background: rgba(87, 85, 85, 0.767);
+    color: rgb(202, 202, 202);
+    font-size: 17px;
+    font-weight: 500;
+    padding: 7px;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
